@@ -11,6 +11,13 @@ The project is attempt to classify music genre from audio data using five differ
 ![Music Genre](https://github.com/kyadanarw/Supervised-ML-for-Music-Genre-Classification/blob/xgb/images/music_genre.jpg)\
 Image from https://blog.byjus.com/knowledge-vine/music-genres-types/ </br>
 
+## Software Requirements
+Required libraries:
+* Python 3.x
+* Scikit-Learn
+* Pandas
+* Matplotlib
+
 <h3>1. Dataset </h3>
 <p> We use fma-rock-vs-hiphop.csv metadata about our tracks alongside the track metrics compiled by <b>The Echo Nest</b>.</p>
 
