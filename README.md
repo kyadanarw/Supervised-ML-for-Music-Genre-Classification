@@ -19,8 +19,7 @@ Required libraries:
 * Matplotlib
 
 ## Dataset
-<p> We use fma-rock-vs-hiphop.csv metadata about our tracks alongside the track metrics compiled by <b>The Echo Nest</b>.</p>
-* fma-rock-vs-hiphop.csv 
+We use fma-rock-vs-hiphop.csv metadata about our tracks alongside the track metrics compiled by <b>The Echo Nest</b>.
 * echonest-metrics.json
 
 
