@@ -19,12 +19,13 @@ Required libraries:
 * Matplotlib
 
 ## Dataset
+<p> We use fma-rock-vs-hiphop.csv metadata about our tracks alongside the track metrics compiled by <b>The Echo Nest</b>.</p>
 * fma-rock-vs-hiphop.csv 
 * echonest-metrics.json
 
 
 <h3>1. Data Preparation </h3>
-<p> We use fma-rock-vs-hiphop.csv metadata about our tracks alongside the track metrics compiled by <b>The Echo Nest</b>.</p>
+<p> First prepare the data by importing and merging two data files</p>
 
 ```python
 #first import pandas 
