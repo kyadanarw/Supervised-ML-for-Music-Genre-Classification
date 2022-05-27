@@ -9,6 +9,7 @@ Decistion Tree
 Random Forest
 
 ![Music Genre](https://github.com/kyadanarw/Supervised-ML-for-Music-Genre-Classification/blob/xgb/images/music_genre.jpg)
+Image from https://blog.byjus.com/knowledge-vine/music-genres-types/ </br>
 
 <h3>1. Preparing our dataset</h3>
 <p>    Over the past few years, streaming services with huge catalogs have become the primary means through which most people listen to their favorite music. For this reason, streaming services have looked into means of categorizing music to allow for personalized recommendations.<br><br>Let's load the metadata about our tracks alongside the track metrics compiled by <b>The Echo Nest</b>.</p>
