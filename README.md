@@ -8,7 +8,7 @@ K-nearest neighbors (KNN)
 Decistion Tree
 Random Forest
 
-![Music Genre](https://github.com/kyadanarw/Supervised-ML-for-Music-Genre-Classification/blob/xgb/images/music_genre.jpg)
+![Music Genre](https://github.com/kyadanarw/Supervised-ML-for-Music-Genre-Classification/blob/xgb/images/music_genre.jpg)\
 Image from https://blog.byjus.com/knowledge-vine/music-genres-types/ </br>
 
 <h3>1. Preparing our dataset</h3>
