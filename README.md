@@ -18,7 +18,12 @@ Required libraries:
 * Pandas
 * Matplotlib
 
-<h3>1. Dataset </h3>
+## Dataset
+* fma-rock-vs-hiphop.csv 
+* echonest-metrics.json
+
+
+<h3>1. Data Preparation </h3>
 <p> We use fma-rock-vs-hiphop.csv metadata about our tracks alongside the track metrics compiled by <b>The Echo Nest</b>.</p>
 
 ```python
