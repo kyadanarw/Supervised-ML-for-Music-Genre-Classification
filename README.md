@@ -20,6 +20,7 @@ Required libraries:
 
 ## Dataset
 We use fma-rock-vs-hiphop.csv metadata about our tracks alongside the track metrics compiled by <b>The Echo Nest</b>.
+* fma-rock-vs-hiphop.csv
 * echonest-metrics.json
 
 
