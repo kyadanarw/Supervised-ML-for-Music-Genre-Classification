@@ -2,11 +2,11 @@
 
 The project is attempt to classify music genre using five different machine learning classifiers:
 
-Logistic Regression (LogR)
-Support Vector Machines (SVM)
-K-nearest neighbors (KNN)
-Decistion Tree
-Random Forest
+* Logistic Regression (LogR)
+* Support Vector Machines (SVM)
+* K-nearest neighbors (KNN)
+* Decistion Tree
+* Random Forest
 
 ![Music Genre](https://github.com/kyadanarw/Supervised-ML-for-Music-Genre-Classification/blob/xgb/images/music_genre.jpg)\
 Image from https://blog.byjus.com/knowledge-vine/music-genres-types/ </br>
