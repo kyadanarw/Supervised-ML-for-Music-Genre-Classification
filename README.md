@@ -15,12 +15,14 @@ Image from https://blog.byjus.com/knowledge-vine/music-genres-types/ </br>
 <p> We use fma-rock-vs-hiphop.csv metadata about our tracks alongside the track metrics compiled by <b>The Echo Nest</b>.</p>
 
 ```python
+#first import pandas 
 import pandas as pd
 
+#read the metadata
 tracks = pd.read_csv('datasets/fma-rock-vs-hiphop.csv')
 echonest_metrics = pd.read_json('datasets/echonest-metrics.json', precise_float=True)
 
-# Merge the relevant columns of tracks and echonest_metrics
+# Merge the medata ata
 echo_tracks = pd.merge(echonest_metrics, tracks[['track_id' , 'genre_top']], how='inner', on='track_id')
 
 # Inspect the resultant dataframe
