@@ -88,7 +88,7 @@ train_features, test_features, train_labels, test_labels = train_test_split(feat
 ```
 
 <h3>4. Normalize the data </h3>
-<p> Once the data is splitted, data preprocessing steps are performed to optimize our model development. To avoid bias, the data is scaled by normalizing with <code>StandardScaler</code> method</p>
+<p> Once the data is splitted, data preprocessing steps are performed to optimize our model development. To avoid bias, the data is scaled by normalizing with <code>StandardScaler</code> method.</p>
 
 ```python
 #import StandardScaler from sklearn
@@ -103,7 +103,7 @@ scaled_train_features = scaler.fit_transform(features)
 ```
 
 <h3>5.Principal Component Analysis for Dinmentinality Reduction</h3>
-<p>Since we didn't find any particular strong correlations between our features, the common feature reduction methods can be used to reduce the dimensionality of the features.After data preprocessing, PCA is here used to determine by how much we can reduce the dimensionality of our data. <b>Scree-plots</b> and <b>Cumulative explained ratio plots</b> can be used to find the number of components to use in further analyses.<br> First let's look at the scree plots. When using scree plots, an 'elbow' (a steep drop from one data point to the next) in the plot is typically used to decide on an appropriate cutoff.</p>
+ <p align="justify">Since we didn't find any particular strong correlations between our features, the common feature reduction methods can be used to reduce the dimensionality of the features.After data preprocessing, PCA is here used to determine by how much we can reduce the dimensionality of our data. <b>Scree-plots</b> and <b>Cumulative explained ratio plots</b> can be used to find the number of components to use in further analyses.<br> First let's look at the scree plots. When using scree plots, an 'elbow' (a steep drop from one data point to the next) in the plot is typically used to decide on an appropriate cutoff.</p>
   
 ```python
 # import PCA from sklean
