@@ -1,7 +1,6 @@
 # Supervised-ML-for-Music-Genre-Classification from Audio Data
 
-The project is attempt to classify music genre from audio data using five different machine learning classifiers:
-
+The project aims to classify music genre from audio data using five different machine learning classifiers:
 * Logistic Regression (LogR)
 * Support Vector Machines (SVM)
 * K-nearest neighbors (KNN)
@@ -62,22 +61,25 @@ echo_tracks.info()
 <p>In order to avoid using the features which have strong correlations with each other -- hence avoiding feature redundancy, we check the correlated features in our data using built-in functions in the <code>pandas</code> package <code>.corr()</code>. </p>
 
 ```python
+# check the correlations between features
 corr_metrics = echo_tracks.corr()
 corr_metrics.style.background_gradient()
 ```
 <p align='center'>
-  <img src='datasets/corr.jpg'>
+![correlationImages]()
 </p>
 
-<h3>3. Normalizing the feature data</h3>
-<p>Since we didn't find any particular strong correlations between our features, we can instead use a common approach to reduce the number of features called <b>principal component analysis (PCA)</b><br>To avoid bias, I first normalize the data using <code>sklearn</code> built-in <code>StandardScaler</code> method</p>
+<h3>3. Normalize the data </h3>
+<p>Since we didn't find any particular strong correlations between our features, the common feature reduction methods can be used to reduce the dimensionality of the features. To avoid bias, the data is normalized using <code>StandardScaler</code> method</p>
 
 ```python
+#import StandardScaler from sklearn
 from sklearn.preprocessing import StandardScaler
 
 features = echo_tracks.drop(['track_id', 'genre_top'], axis=1)
 labels = echo_tracks.genre_top
 
+#normalize the features using StandardScaler
 scaler = StandardScaler()
 scaled_train_features = scaler.fit_transform(features)
 ```
