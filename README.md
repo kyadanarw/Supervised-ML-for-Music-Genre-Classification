@@ -102,7 +102,7 @@ scaler = StandardScaler()
 scaled_train_features = scaler.fit_transform(features)
 ```
 
-<h3>5.Principal Component Analysis for Dinmentinality Reduction</h3>
+<h3>5. Principal Component Analysis for Dinmentinality Reduction</h3>
  <p align="justify">Since we didn't find any particular strong correlations between our features, the common feature reduction methods can be used to reduce the dimensionality of the features.After data preprocessing, PCA is here used to determine by how much we can reduce the dimensionality of our data. <b>Scree-plots</b> and <b>Cumulative explained ratio plots</b> can be used to find the number of components to use in further analyses.<br> First let's look at the scree plots. When using scree plots, an 'elbow' (a steep drop from one data point to the next) in the plot is typically used to decide on an appropriate cutoff.</p>
   
 ```python
@@ -123,8 +123,8 @@ ax.bar(range(pca.n_components_), exp_variance)
 
 <p>Unfortunately, there does not appear to be a clear elbow in this scree plot, which means it is not straightforward to find the number of intrinsic dimensions using this method.</p>
 
-<h3>5. Further visualization of PCA</h3>
-<p>Now, let's nownlook at the <b>cumulative explained variance plot</b> to determine how many features are required to explain, say, about 85% of the variance. (85%is just arbitary value here, it can be determined by rule of thumb</p>
+<h3>6. Further visualization of PCA</h3>
+<p>Now, let's nownlook at the <b>cumulative explained variance plot</b> to determine how many features are required to explain, say, about 85% of the variance. (85% is just arbitary value here, it can be determined by rule of thumb.</p>
 
 ```python
 #compute cumulative variance 
@@ -137,10 +137,11 @@ ax.axhline(y=0.85, linestyle='--')
 
 # choose the n_components where about 85% of our variance can be explained
 n_components = 6
+pca = PCA(n_components=6, random_state=10)
 
-pca = PCA(n_components, random_state=10)
-pca.fit(scaled_train_features)
-pca_projection = pca.transform(scaled_train_features)
+# Fit and transform the scaled training and testing features using pca
+train_pca = pca.fit_transform(scaled_train_features)
+test_pca = pca.transform(scaled_test_features)
 ```
 ![cumulativeVariance](https://github.com/kyadanarw/Supervised-ML-for-Music-Genre-Classification/blob/xgb/images/cumu_variance.png)
 
