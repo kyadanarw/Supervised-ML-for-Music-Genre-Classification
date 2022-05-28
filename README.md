@@ -58,8 +58,8 @@ echo_tracks.info()
 |         memory usage: 412.7+ KB         |                       |
 
 
-<h3>2. Pairwise relationships between continuous variables</h3>
-<p>We want to avoid using variables that have strong correlations with each other -- hence avoiding feature redundancy<br>To get a sense of whether there are any strongly correlated features in our data, we will use built-in functions in the <code>pandas</code> package <code>.corr()</code>. </p>
+<h3>2. Check the correlations between features </h3>
+<p>In order to avoid using the features which have strong correlations with each other -- hence avoiding feature redundancy, we check the correlated features in our data using built-in functions in the <code>pandas</code> package <code>.corr()</code>. </p>
 
 ```python
 corr_metrics = echo_tracks.corr()
