@@ -66,11 +66,29 @@ corr_metrics = echo_tracks.corr()
 corr_metrics.style.background_gradient()
 ```
 <p align='center'>
-![correlationImages]()
+![correlationImages](https://github.com/kyadanarw/Supervised-ML-for-Music-Genre-Classification/blob/xgb/images/correlation.png)
 </p>
 
-<h3>3. Normalize the data </h3>
-<p>Since we didn't find any particular strong correlations between our features, the common feature reduction methods can be used to reduce the dimensionality of the features. To avoid bias, the data is normalized using <code>StandardScaler</code> method</p>
+<h4>3. Data Splitting </h4>
+<p>Since we didn't find any particular strong correlations between our features, we can now split our data into an array containing our features, and another containing the labels - the genre of the track.</p>
+  
+ ```python
+  # Import train_test_split function and Decision tree classifier
+from sklearn.model_selection import train_test_split
+
+# Create features
+features = echo_tracks.drop(["genre_top", "track_id"], axis=1).values
+
+# Create labels
+labels = echo_tracks["genre_top"].values
+
+# Split our data
+train_features, test_features, train_labels, test_labels = train_test_split(features, labels, 
+                                                                            random_state=10)
+```
+
+<h3>4. Normalize the data </h3>
+<p> Once the data is splitted, data preprocessing steps are performed to optimize our model development. To avoid bias, the data is scaled by normalizing with <code>StandardScaler</code> method</p>
 
 ```python
 #import StandardScaler from sklearn
@@ -84,12 +102,14 @@ scaler = StandardScaler()
 scaled_train_features = scaler.fit_transform(features)
 ```
 
-<h3>4. Principal Component Analysis on our scaled data</h3>
-<p>Now PCA is ready to determine by how much we can reduce the dimensionality of our data. We can use <b>scree-plots</b> and <b>cumulative explained ratio plots</b> to find the number of components to use in further analyses.<br>When using scree plots, an 'elbow' (a steep drop from one data point to the next) in the plot is typically used to decide on an appropriate cutoff.</p>
+<h3>5. Feature Dimensionality Reduction Using Principal Component Analysis on our scaled data</h3>
+<p>Since we didn't find any particular strong correlations between our features, the common feature reduction methods can be used to reduce the dimensionality of the features.PCA is used to determine by how much we can reduce the dimensionality of our data. We can use <b>scree-plots</b> and <b>cumulative explained ratio plots</b> to find the number of components to use in further analyses.<br>First let's look at the scree plots. When using scree plots, an 'elbow' (a steep drop from one data point to the next) in the plot is typically used to decide on an appropriate cutoff.</p>
   
 ```python
+# import PCA from sklean
 from sklearn.decomposition import PCA
 
+#inititae PCA and transform features into pricipal components
 pca = PCA()
 pca.fit(scaled_train_features)
 
@@ -99,7 +119,7 @@ fig, ax = plt.subplots()
 ax.bar(range(pca.n_components_), exp_variance)
 ```
 
-<img src='datasets/PCAhist.jpg'>
+![pca](https://github.com/kyadanarw/Supervised-ML-for-Music-Genre-Classification/blob/xgb/images/pca.png)
 
 <p>Unfortunately, there does not appear to be a clear elbow in this scree plot, which means it is not straightforward to find the number of intrinsic dimensions using this method.</p>
 
