@@ -1,10 +1,10 @@
 # Supervised-ML-for-Music-Genre-Classification from Audio Data
 
 The project aims to classify music genre from audio data using five different machine learning classifiers:
-* Logistic Regression (LogR)
-* Support Vector Machines (SVM)
-* K-nearest neighbors (KNN)
+* Logistic Regression
 * Decistion Tree
+* K-nearest neighbors (KNN)
+* Support Vector Machines (SVM)
 * Random Forest
 
 ![Music Genre](https://github.com/kyadanarw/Supervised-ML-for-Music-Genre-Classification/blob/xgb/images/music_genre.jpg)\
@@ -147,25 +147,11 @@ test_pca = pca.transform(scaled_test_features)
 
 
 
-<h3>6. Train a decision tree to classify genre</h3>
-<p>Now we can use the lower dimensional PCA projection of the data to classify songs into genres. we will be using a simple algorithm known as a <b>decision tree</b>.</p>
+<h3>7. Train LogisticRegression Classifier to classify music genre</h3>
+<p>Once the data is transformed using the lower dimensional PCA projection of the data, we can now classify the songs into genres. First we will use <b>logistic regression classifier</b>.</p>
 
 ```python
-from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
-
-train_features, test_features, train_labels, test_labels = train_test_split(pca_projection, labels, random_state=10)
-
-tree = DecisionTreeClassifier(random_state=10)
-tree.fit(train_features, train_labels)
-
-pred_labels_tree = tree.predict(test_features)
-```
-
-<h3>7. Compare our decision tree to a logistic regression</h3>
-<p>There's always the possibility of other models that will perform even better! Sometimes simplest is best, and so we will start by applying <b>logistic regression</b>.</p>
-
-```python
+#import train_test_split and Logistic Regression classisifer from sklearn
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report
 
@@ -175,10 +161,80 @@ pred_labels_logit = logreg.predict(test_features)
 
 class_rep_tree = classification_report(test_labels, pred_labels_tree)
 class_rep_log = classification_report(test_labels, pred_labels_logit)
+```
 
+<h3>8. Train Decision Tree Classifier to classify music genre</h3>
+<p>There's always the possibility of other models that will perform even better! Sometimes simplest is best, and so we will start by applying <b>logistic regression</b>.</p>
+
+```python
+#import DecisionTreeClassifier from sklearn
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+
+train_features, test_features, train_labels, test_labels = train_test_split(pca_projection, labels, random_state=10)
+
+tree = DecisionTreeClassifier(random_state=10)
+tree.fit(train_features, train_labels)
+
+pred_labels_tree = tree.predict(test_features)
 print("Decision Tree: \n", class_rep_tree)
 print("Logistic Regression: \n", class_rep_log)
 ```
+<h3>9. Train KNN to classify music genre</h3>
+<p>There's always the possibility of other models that will perform even better! Sometimes simplest is best, and so we will start by applying <b>logistic regression</b>.</p>
+
+```python
+#import DecisionTreeClassifier from sklearn
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+
+train_features, test_features, train_labels, test_labels = train_test_split(pca_projection, labels, random_state=10)
+
+tree = DecisionTreeClassifier(random_state=10)
+tree.fit(train_features, train_labels)
+
+pred_labels_tree = tree.predict(test_features)
+print("Decision Tree: \n", class_rep_tree)
+print("Logistic Regression: \n", class_rep_log)
+```
+
+<h3>10. Train SVM to classify music genre</h3>
+<p>There's always the possibility of other models that will perform even better! Sometimes simplest is best, and so we will start by applying <b>logistic regression</b>.</p>
+
+```python
+#import DecisionTreeClassifier from sklearn
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+
+train_features, test_features, train_labels, test_labels = train_test_split(pca_projection, labels, random_state=10)
+
+tree = DecisionTreeClassifier(random_state=10)
+tree.fit(train_features, train_labels)
+
+pred_labels_tree = tree.predict(test_features)
+print("Decision Tree: \n", class_rep_tree)
+print("Logistic Regression: \n", class_rep_log)
+```
+
+<h3>8. Train Random Forest to classify music genre</h3>
+<p>There's always the possibility of other models that will perform even better! Sometimes simplest is best, and so we will start by applying <b>logistic regression</b>.</p>
+
+```python
+#import DecisionTreeClassifier from sklearn
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+
+train_features, test_features, train_labels, test_labels = train_test_split(pca_projection, labels, random_state=10)
+
+tree = DecisionTreeClassifier(random_state=10)
+tree.fit(train_features, train_labels)
+
+pred_labels_tree = tree.predict(test_features)
+print("Decision Tree: \n", class_rep_tree)
+print("Logistic Regression: \n", class_rep_log)
+```
+
+
 
 | Decision Tree: |        |          |         |      |  
 |----------------|--------|----------|---------|------|
