@@ -65,11 +65,11 @@ echo_tracks.info()
 corr_metrics = echo_tracks.corr()
 corr_metrics.style.background_gradient()
 ```
-<p align='center'>
-![correlationImages](https://github.com/kyadanarw/Supervised-ML-for-Music-Genre-Classification/blob/xgb/images/correlation.png)
-</p>
 
-<h4>3. Data Splitting </h4>
+![correlationImages](https://github.com/kyadanarw/Supervised-ML-for-Music-Genre-Classification/blob/xgb/images/correlation.png)
+
+
+<h3>3. Data Splitting </h3>
 <p>Since we didn't find any particular strong correlations between our features, we can now split our data into an array containing our features, and another containing the labels - the genre of the track.</p>
   
  ```python
@@ -102,8 +102,8 @@ scaler = StandardScaler()
 scaled_train_features = scaler.fit_transform(features)
 ```
 
-<h3>5. Feature Dimensionality Reduction Using Principal Component Analysis on our scaled data</h3>
-<p>Since we didn't find any particular strong correlations between our features, the common feature reduction methods can be used to reduce the dimensionality of the features.PCA is used to determine by how much we can reduce the dimensionality of our data. We can use <b>scree-plots</b> and <b>cumulative explained ratio plots</b> to find the number of components to use in further analyses.<br>First let's look at the scree plots. When using scree plots, an 'elbow' (a steep drop from one data point to the next) in the plot is typically used to decide on an appropriate cutoff.</p>
+<h3>5.Principal Component Analysis for Dinmentinality Reduction</h3>
+<p>Since we didn't find any particular strong correlations between our features, the common feature reduction methods can be used to reduce the dimensionality of the features.PCA is here used to determine by how much we can reduce the dimensionality of our data. <b>Scree-plots</b> and <b>Cumulative explained ratio plots</b> can be used to find the number of components to use in further analyses.<br> First let's look at the scree plots. When using scree plots, an 'elbow' (a steep drop from one data point to the next) in the plot is typically used to decide on an appropriate cutoff.</p>
   
 ```python
 # import PCA from sklean
