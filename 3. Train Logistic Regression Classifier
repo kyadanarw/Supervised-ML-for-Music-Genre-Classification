@@ -1,0 +1,17 @@
+
+
+<h3>7. Train LogisticRegression Classifier to classify music genre</h3>
+<p>Once the data is transformed using the lower dimensional PCA projection of the data, we can now classify the songs into genres. First we will use <b>logistic regression classifier</b>.</p>
+
+```python
+#import train_test_split and Logistic Regression classisifer from sklearn
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
+
+logreg = LogisticRegression(random_state=10)
+logreg.fit(train_features, train_labels)
+pred_labels_logit = logreg.predict(test_features)
+
+class_rep_tree = classification_report(test_labels, pred_labels_tree)
+class_rep_log = classification_report(test_labels, pred_labels_logit)
+```
