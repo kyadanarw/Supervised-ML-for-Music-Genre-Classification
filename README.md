@@ -23,5 +23,5 @@ We use fma-rock-vs-hiphop.csv metadata about our tracks alongside the track metr
 * echonest-metrics.json
 
 ## File Struture
-To perform exploratory data analysis, run 1.EDA.ipynb
-To evaluate each ML classifier, run 2. Classification.ipynb
+* To perform exploratory data analysis, run 1.EDA.ipynb
+* To evaluate each ML classifier, run 2. Classification.ipynb
