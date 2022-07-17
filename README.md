@@ -150,10 +150,10 @@ test_pca = pca.transform(scaled_test_features)
 ![cumulativeVariance](https://github.com/kyadanarw/Supervised-ML-for-Music-Genre-Classification/blob/xgb/images/cumu_variance.png)
 
 ## Classification
-For each classifier, the .ipynb npotebooks started with 'tain___Variants.ipynb' include variants of each classifier with data preprocessing, data scaling, with or without PCA and with or without hyperparameters tuning.
+For each classifier, the .ipynb npotebooks started with <code>tain___Variants.ipynb</code> include variants of each classifier with data preprocessing, data scaling, with or without PCA and with or without hyperparameters tuning.
 To simulate and test classifiers, use Classification.ipynb by calling the desired variant of each classifier.
-* train_LogisticRegression_Variants.ipynb for Logistic Regression
-* train_DecisionTree_Variants.ipynb Decistion Tree
-* train_KNN_Variants.ipynb for K-nearest neighbors (KNN)
-* train_SVM_Variants.ipynb for Support Vector Machines (SVM)
-* train_ensemble_Variants.ipynb for Random Forest
+* <code>train_LogisticRegression_Variants.ipynb</code> for Logistic Regression
+* <code>train_DecisionTree_Variants.ipynb</code> for Decistion Tree
+* <code>train_KNN_Variants.ipynb</code> for K-nearest neighbors (KNN)
+* <code>train_SVM_Variants.ipynb</code> for Support Vector Machines (SVM)
+* <code>train_ensemble_Variants.ipynb</code> for Random Forest
