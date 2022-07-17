@@ -157,3 +157,38 @@ To simulate and test classifiers, use Classification.ipynb by calling the desire
 * <code>train_KNN_Variants.ipynb</code> for K-nearest neighbors (KNN)
 * <code>train_SVM_Variants.ipynb</code> for Support Vector Machines (SVM)
 * <code>train_ensemble_Variants.ipynb</code> for Random Forest
+
+## Results
+<table style="width:100%">
+  <tr>
+    <th>Model</th>
+    <th>Accuracy</th> 
+  </tr>
+ 
+   <tr>
+    <td>Logistic Regression</td>
+    <td><strong>88%</strong></td>
+  </tr>
+  
+  <tr>
+    <td>Decision Tree</td>
+    <td><strong>88%</strong></td>
+  </tr>
+  
+    <tr>
+    <td> Support Vector Machine</td>
+    <td><strong>90%</strong></td>
+  </tr>
+  
+      <tr>
+    <td> K Nearest Neighbors</td>
+    <td><strong>90%</strong></td>
+  </tr>
+  
+      <tr>
+    <td> Random Forest</td>
+    <td><strong>90%</strong></td>
+  </tr>
+  
+  
+</table>
