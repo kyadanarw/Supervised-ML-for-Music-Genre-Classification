@@ -1,6 +1,6 @@
 # Supervised-ML-for-Music-Genre-Classification from Audio Data
 
-The repository demonstrates classificatoin of music genre from audio data using five different machine learning classifiers:
+The project aims to classify music genre from audio data using five different machine learning classifiers:
 * Logistic Regression
 * Decistion Tree
 * K-nearest neighbors (KNN)
@@ -149,3 +149,11 @@ test_pca = pca.transform(scaled_test_features)
 ```
 ![cumulativeVariance](https://github.com/kyadanarw/Supervised-ML-for-Music-Genre-Classification/blob/xgb/images/cumu_variance.png)
 
+## Classification
+For each classifier, the .ipynb npotebooks started with 'tain___Variants.ipynb' include variants of each classifier with data preprocessing, data scaling, with or without PCA and with or without hyperparameters tuning.
+To simulate and test classifiers, use Classification.ipynb by calling the desired variant of each classifier.
+* train_LogisticRegression_Variants.ipynb for Logistic Regression
+* train_DecisionTree_Variants.ipynb Decistion Tree
+* train_KNN_Variants.ipynb for K-nearest neighbors (KNN)
+* train_SVM_Variants.ipynb for Support Vector Machines (SVM)
+* train_ensemble_Variants.ipynb for Random Forest
