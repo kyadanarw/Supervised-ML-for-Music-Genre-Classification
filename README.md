@@ -161,7 +161,7 @@ To simulate and test classifiers, use Classification.ipynb by calling the desire
 ## Results
 <table style="width:100%">
   <tr>
-    <th>Model</th>
+    <th>Classifier/th>
     <th>Accuracy</th> 
   </tr>
  
