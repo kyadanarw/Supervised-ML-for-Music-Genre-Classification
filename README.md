@@ -165,7 +165,7 @@ To simulate and test classifiers, use Classification.ipynb by calling the desire
     <th>Accuracy</th> 
   </tr>
  
-   <tr>
+  <tr>
     <td>Logistic Regression</td>
     <td><strong>88%</strong></td>
   </tr>
@@ -175,20 +175,19 @@ To simulate and test classifiers, use Classification.ipynb by calling the desire
     <td><strong>88%</strong></td>
   </tr>
   
-    <tr>
+  <tr>
     <td> Support Vector Machine</td>
     <td><strong>90%</strong></td>
   </tr>
   
-      <tr>
+  <tr>
     <td> K Nearest Neighbors</td>
     <td><strong>90%</strong></td>
   </tr>
   
-      <tr>
+  <tr>
     <td> Random Forest</td>
     <td><strong>90%</strong></td>
   </tr>
-  
-  
+
 </table>
