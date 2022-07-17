@@ -1,6 +1,6 @@
 # Supervised-ML-for-Music-Genre-Classification from Audio Data
 
-The project aims to classify music genre from audio data using five different machine learning classifiers:
+The repository demonstrates classificatoin of music genre from audio data using five different machine learning classifiers:
 * Logistic Regression
 * Decistion Tree
 * K-nearest neighbors (KNN)
